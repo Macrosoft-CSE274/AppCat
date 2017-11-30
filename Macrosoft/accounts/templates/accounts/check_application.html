@@ -1,0 +1,32 @@
+
+<!--In this file, it will need a argument passed into this template
+ that will be "submits", it represent all the app submit in the database-->
+{% extends "base.html" %}
+
+{% block jumbo %}
+    <div class = "container">
+        {% for submit in submits %}
+            <div class="container">
+                <ul>
+                    <li>app's name   : {{submit.name}}</li>
+                    <li>The developer: {{submit.developer}}</li>
+                    <li>platform runs: {{submit.platform}}</li>
+                    <li>version info : {{submit.platform}}</li>
+                    <li>The price    : {{submit.price}}$</li>
+                </ul>
+                <form method = "post" action = "checkasubmit/">
+                    <p>Input the feedback (recommended): </p>
+                    <input type = "textarea" name="feedback">
+                    <input type="hidden" name="appname" value = "{{submit.name}}">
+                    <!-- how about we put a radio buttons at there to decide
+                whether this app will be approved-->
+
+
+                    <button type="submit" name="button">Approve/Disapprove</button>
+
+                </form>
+
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block jumbo %}
+    <div class ="container">
+        <h3>Please fill out this form</h3>
+        <form method = "post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button>Submit the application</button>
+        </form>
+    </div>
+{% endblock %}

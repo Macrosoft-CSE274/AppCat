@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+
+{% block jumbo %}
+		<div class="container" style="padding:30px">
+		{% if appList|length == 0 %}
+		<h2>No results</h2>
+		<br>
+		<br>
+		{% else %}
+        {% for app in appList %}
+        	<div class="container" border = "2px; green">
+        		<h4>Name: {{ app.name }}</h4>
+        		<h4>developer: {{ app.developer }} </h4>
+        		<h4>platform: {{ app.platform }} </h4>
+        		<h4>versions: {{ app.version }} </h4>
+        		<h4>rating: {{ app.rating }} </h4>
+        	</div>
+                <div class="container">
+                        <form action = "app_detail/" method = "get">
+								<input type="hidden" name="appname" value = "{{app.name}}">
+                                <button type = "submit" name = "button" btn btn-outline-success my-2 my-sm-0> detail of {{app.name}} </button>
+                       </form>
+                </div>
+                <br>
+                <br>
+        {% endfor %}
+        </div>
+        {% endif %}
+        {% endblock %}

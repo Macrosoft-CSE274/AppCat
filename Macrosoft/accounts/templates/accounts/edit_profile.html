@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Appcat - Profile Editor</title>
+{% endblock %}
+
+{% block jumbo %}
+    <div class="container">
+        <h1>Profile Editor</h1>
+            <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-info">Submit</button>
+
+            </form>
+            </div>
+    </div>
+{% endblock %}

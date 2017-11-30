@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block jumbo %}
+    <div class = "container">
+        <h1> This is the {{app.name}} page</h1>
+
+        <h4>Name: {{ app.name }}</h4>
+        <h4>Developer: {{ app.developer }} </h4>
+        <h4>Platform: {{ app.platform }} </h4>
+        <h4>Versions: {{ app.version }} </h4>
+        <h4>Rating: {{ app.rating }} </h4>
+
+    </div>
+
+    <div class = "container">
+        <h5>Do you want to add a comment on this app?</h5>
+        <h5>Welcome, your comment is welcome!</h5>
+        <form method = "post" action = "addComment">
+            {% csrf_token %}
+            <input type="hidden" name = "appname" value = "{{app.name}}">
+            <p>Please input your comment: </p><input type="text" name="content">
+            <input type="submit" class = "btn btn-outline-success my-2 my-sm-0" >
+        </form>
+    </div>
+    <!--
+    <div class = "container">
+        {% for comments in app.comments %}
+        <div class="container">
+            <h5>{{comments.authorname}}</h5>
+            <p>
+                {{comments.content}}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+    -->
+{% endblock %}

@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="Macrosoft" content="Portfolio">
+	<title>AppCat</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'accounts/styles.css' %}" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+   {% load staticfiles %}
+    <link rel="shortcut icon" type="image/ico" href="{% static 'img/catLogo2.png' %}"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body data-spy="scroll" data-target="#my-navbar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<div id="main">
+  	<nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
+  		<div class="container">
+			<div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+              <a class="navbar-brand" href="/">
+                  <img src="{% static 'img/catLogo2.png' %}" width="40" height="40" class="d-inline-block align-top img-thumbnail" alt=""></a>
+                <br>
+		    </div>
+			<div id="navbar" class="navbar-collapse collapse">
+
+			<form method = "get" action = "search/" target="_blank">
+	          <ul class="nav navbar-nav">
+				  <li><a href="/accounts/profile">Profile</a></li>
+				  <li><a href="/accounts/register">Register</a></li>
+
+				  <li style="padding:17.5px 0px"> <input class="form-control mr-sm-2" type="text" placeholder="Search Applications" name = "keyword"> </li>
+				  <li style="padding:17.5px 0px"> <input class="btn btn-outline-success my-2 my-sm-0" type="SUBMIT">  </li>
+
+	          </ul>
+	          </form>
+
+	          <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/accounts/login"><i class="fa fa-sign-in"></i> Log In</a></li>
+	          </ul>
+	        </div>
+  		</div>
+  	</nav>
+        {% block jumbo %}
+  	<div class="jumbotron" id="top">
+  		<div class="container text-center" id="top-text">
+            <h1 class="asap-font" style="font-weight: bold; font-size: 100px; color: Cornsilk;">AppCat</h1>
+			<h4 class="asap-font" style="font-weight: bold; font-size: 50px; color: Cornsilk;">Powered by Macrosoft</h4>
+
+  			<p id="my-intro" style="font-weight: bold; font-size: 25px; color: Cornsilk;">
+				Welcome to AppCat, a one-stop repository to get information
+                on all kinds of different applications from the Apple App Store, the Amazon
+                App Store, and the Google Play Store.  Check out these app stores below.
+            </p>
+
+			<br><br>
+  			<div class="btn-group buffer">
+				<center>
+					<a href="https://www.apple.com/itunes/charts/free-apps/" class="btn btn-lg btn-primary outline" target="_blank" id="appleStore"> <h4 style="font-weight: bold">Apple App Store</h4></a>
+					<a href="https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011" class="btn btn-lg btn-warning outline" target="_blank" id="amazon"> <h4 style="font-weight: bold">Amazon App Store</h4></a>
+					<a href="https://play.google.com/store?hl=en" class="btn btn-lg btn-danger outline" target="_blank" id="googlePlay"> <h4 style="font-weight: bold">Google Play Store</h4></a>
+                </center>
+
+  			</div>
+  		</div>
+  	</div>
+        {% endblock %}
+
+	</div>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/3ced957014.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+	<script src="https://maxg-static.s3.amazonaws.com/static/home/js/lightbox.min.js?Signature=FQwwZmNCkMXZOy%2BSmK%2FusLq%2BgPA%3D&amp;Expires=1509945473&amp;AWSAccessKeyId=AKIAJDHFIV6QUC3D7I6A"></script>
+	<script src="https://maxg-static.s3.amazonaws.com/static/home/js/main.js?Signature=NykVdTaej%2F5GV7PIhMCWjR1kq6A%3D&amp;Expires=1509945473&amp;AWSAccessKeyId=AKIAJDHFIV6QUC3D7I6A"></script>
+
+
+  </body>
+<div class="container scroll-buffer" id="featured_apps">
+  		<section>
+			<div class="page-header">
+  				<h1>Featured Applications<br></h1>
+  			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Social</h1>
+				</div>
+			</div>
+			<br>
+
+  			<div class="row">
+  				<div class="col-md-4 centered">
+					<img src="{% static 'img/snapchat.png' %}" width="200" height="200" class="img-responsive"/>
+					<p class="center">
+					<h2><b>Snapchat</b></h2>
+						<h4>Photo & Video</h4>
+						<br>
+  						Life's more fun when you live in the moment :) Happy Snapping!
+
+					</p>
+
+  				</div>
+				<div class="col-md-4 centered">
+					<img src="{% static 'img/instagram.png' %}" width="200" height="200" class="img-responsive"/>
+					<p class="center">
+					<h2><b>Instagram</b></h2>
+						<h4>Photo & Video</h4>
+						<br>
+							Instagram is a simple way to capture and share the world’s moments.
+							Follow your friends and family to see what they’re up to,
+							and discover accounts from all over the world that are sharing
+							things you love. Join the community of over 500 million people
+							and express yourself by sharing all the moments
+							of your day––the highlights and everything in between, too.
+					</p>
+
+  				</div>
+				<div class="col-md-4 centered">
+					<img src="{% static 'img/youtube.png' %}" width="200" height="200" class="img-responsive"/>
+					<p class="center">
+					<h2><b>YouTube</b></h2>
+						<h4>Photo & Video</h4>
+						<br>
+						Get the official YouTube app for iPhone and iPad.
+						See what the world is watching in music, gaming, entertainment, news and more. Subscribe to channels, share with friends, edit and upload videos, and watch on any device.
+
+						You can also create playlists, check out what’s trending, express yourself with comments, share videos with friends, cast a video to your TV, and more – all from inside the app.
+					</p>
+
+  				</div>
+
+  			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Email</h1>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+  				<div class="col-md-4 centered">
+					<img src="{% static 'img/gmail.jpg' %}" width="200" height="200"class="img-responsive"/>
+					<p class="center">
+					<h2><b>Gmail</b></h2>
+						<h4>Productivity</h4>
+						<br>
+					The official Gmail app brings the best of Gmail to your iPhone or iPad with real-time notifications,
+					multiple account support and search that works across all your mail.
+					</p>
+
+  				</div>
+				<div class="col-md-4 centered">
+					<img src="{% static 'img/instagram.png' %}" width="200" height="200" class="img-responsive"/>
+					<p class="center">
+					<h2><b>Instagram</b></h2>
+						<h4>Photo & Video</h4>
+						<br>
+							Instagram is a simple way to capture and share the world’s moments.
+							Follow your friends and family to see what they’re up to,
+							and discover accounts from all over the world that are sharing
+							things you love. Join the community of over 500 million people
+							and express yourself by sharing all the moments
+							of your day––the highlights and everything in between, too.
+					</p>
+
+  				</div>
+				<div class="col-md-4 centered">
+					<img src="{% static 'img/youtube.png' %}" width="200" height="200" class="img-responsive"/>
+					<p class="center">
+					<h2><b>YouTube: Watch, Listen, Stream</b></h2>
+						<h4>Photo & Video</h4>
+						<br>
+						Get the official YouTube app for iPhone and iPad.
+						See what the world is watching in music, gaming, entertainment, news and more. Subscribe to channels, share with friends, edit and upload videos, and watch on any device.
+
+						You can also create playlists, check out what’s trending, express yourself with comments, share videos with friends, cast a video to your TV, and more – all from inside the app.
+					</p>
+
+  				</div>
+
+  			</div>
+			<hr>
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Travelling</h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<h3>Silicon Valley</h3>
+					<p class="center">
+						It has always been a dream of mine to go to America. When I was young I thought that everything was just bigger and better. I've since realised that the United States (especially the San Francisco bay area) can provide a wealth of opportunity that is simply not available to the same extent from anywhere else in the world.
+					</p>
+					<p class="center">
+						I flew out to San Francisco on 30th June 2016 and I love being able to meet so many inspirational people in the industry. The other huge advantage about being here is that I get to surround myself with other people who code. This only motivates me to work harder and collaborate more effectively.
+					</p>
+					<div class="google-maps">
+						<iframe src= "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d449042.5335197182!2d-122.30228463569685!3d37.585277159784376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1465734983081" frameborder="1" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h3>Danish Jamboree</h3>
+					<p class="center">
+						<a href="https://maxg-static.s3.amazonaws.com/static/home/images/denmark.jpg?Signature=umGr%2FxZvlZS3wR70y6y8Gkx%2BWbM%3D&amp;Expires=1510718192&amp;AWSAccessKeyId=AKIAJDHFIV6QUC3D7I6A" data-lightbox="denmark-modal" data-title="">
+							<img src="https://maxg-static.s3.amazonaws.com/static/home/images/denmark.jpg?Signature=umGr%2FxZvlZS3wR70y6y8Gkx%2BWbM%3D&amp;Expires=1510718192&amp;AWSAccessKeyId=AKIAJDHFIV6QUC3D7I6A" alt="Denmark" class="img-responsive"/>
+						</a><br>
+						I was a part of the scouts from a young age, but never was it more exciting for me than when my scout troop got the incredible opportunity to go travelling to Denmark from England to meet <i>over 30,000 scouts</i> from around the world for a week in a vast international event. Not only that, we got to spend another week or so in a Danish homestay experiencing a new culture and meeting some really brilliant people. By the way, <a href="https://www.youtube.com/watch?v=23KTho1Dch4">here's</a> the song for that event (it was certainly fun trying to sing the Danish lyrics)!
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h3>Expedition</h3>
+					<p class="center">
+						Having had an early morning paper round for over five years - largely to save up to be able to go on expedition, I was able to
+						fund my place on an expedition to Laos and Thailand in the summer of 2014, which was undoubtedly one of the most significant periods of
+						my life. The whole trip and the opportunity to teach English to Laos' children taught me so much about our materialistic
+						values and lack of appreciation of our comparative privilege. We stayed in an old classroom in the village,
+						when I had some free time I covered the chalk boards with some good old proof by induction and taught some times tables too!<br>
+					</p>
+					<a href="https://maxg-static.s3.amazonaws.com/static/home/images/exped.jpg?Signature=0WpF9HaG1LKRPbT1dP4wYSpdJiY%3D&amp;Expires=1510718192&amp;AWSAccessKeyId=AKIAJDHFIV6QUC3D7I6A" data-lightbox="exped-modal" data-title="">
+						<img src="https://maxg-static.s3.amazonaws.com/static/home/images/exped.jpg?Signature=0WpF9HaG1LKRPbT1dP4wYSpdJiY%3D&amp;Expires=1510718192&amp;AWSAccessKeyId=AKIAJDHFIV6QUC3D7I6A" alt="Expedition" class="img-responsive"/>
+					</a>
+				</div>
+
+			</div>
+  		</section>
+  	</div>
+</html>
