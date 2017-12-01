@@ -1,0 +1,61 @@
+THis Macrosoft Project has the build script
+
+------------------------------------------------------------------
+---------Step 1----------double click the "quickOperation"--------
+
+The build Script's name is quickOperation
+and it is under the Macrosoft Directory
+its name is "quickOperation.bat"
+
+-----------------------------------------------------------------
+---------Step 2----------type number to choose what to do -------
+
+After you double click that
+it will pop up a terminal like window
+and it will show 6 options
+
+this program will keeiing asking you what operation you need to done
+and execute the operation until you stop the loop by following the instruction
+
+input number ---- 1
+1. start a new App in the project
+    and it also will adjusting the setting.py automatically
+
+input number ---- 2
+2. run the local server
+ATTENTION!!!: when you use this function, you need to restart thi script
+                if you want to do something else.......
+                This is a limitation.
+
+input the number ---- 3
+3. make migrations and migrate
+    this generally is used when we make change to the model level code
+    models.py
+
+input the number ---- 4
+4. run the test aotumatically
+    this can help user to run the test witout typping the long command
+
+input the number ---- 5
+5. execute the git pull
+    update the current directory from the github remote server
+
+input the number ---- 6
+6. execute the git push command
+    update the change on the local directory, the commited change to the
+    remote github server
+
+    ATTENTION: when you use this, you may face some problem like conflicts when merging
+
+------------------------------------------------------
+---------Step 3-------quit or continue to do something
+
+if you want to quit ----
+at the next round when you choose the number,
+type an number other than 1, 2, 3, 4, 5, 6
+else------
+continue to do operation
+
+
+good luck!!
+
