@@ -1,0 +1,64 @@
+# this is a list of tests we gonna implements
+# in order to test the reliability of our app
+# the web based app
+
+--------white box test---------
+
+1. Search an app in the search box and see if that cab return a result page
+   and click into the result of an specific and see if that can go to the
+   detail page of that app
+
+2. Let an register user to submit an application for app adding
+   and see if the administrator can see the application and approve/disapporve
+   the app and give feedback
+   and finalyy see if the user can know whether their application is approved and
+   if they can see the feedback from the administartor
+
+3. Register an user and see if this register user can login as expected
+
+4. try the search button at every page or after a lot of operation done
+   see whether the search can work.
+
+
+---------grey box test---------
+
+1. input the different weblink in the browser
+   and see if the client can response as expected
+   do the response as they should do, this gonna test the
+   regular expression mecahnism for recognizing the weblinks.
+
+2. When add user, add comment and add app
+   see if the database do the right operation
+   is there a significant lack of efficiency?
+   do we properly close the database after we use that?
+
+3. When people doing different kind of operation on the website
+   see if the server receive the rigth request form as expected
+   (the GET  or   POST  form)
+
+4. We user try to add a comment to an app
+   See if how the comment is process?
+   how the app comment is added to app and to the database?
+   Is there any way make this comment can be retrieved without getting another comment?
+
+
+---------Black box test--------------
+
+1. check how the seach function work in this app
+   when user submit a keyword, how the backend process the this keyword
+   how it compare to the existed apps' name and how to judge the equality
+   Is all the way as exepcted? Is all the way proper enough
+   (from security and efficiency prespective) ?
+
+2. when user request a webpage, we can check how the server get the response
+   and render the custom webpage for the user? Is different custom requirement from
+   user are satisfied? Is this process efficiency enough? Is there any operation
+   during this process will cause potential harm to the system? Is this webpage can
+   work well when user get it?
+
+3. When user do operation on the webpage
+   we will check how the data from user is processed
+   how each lines of code treat user's data?
+   Is the logic of code is proper and right?
+   how the server will response when exception happen?
+   Can the server reduce the risk to minimum then the exception happen?
