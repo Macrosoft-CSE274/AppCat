@@ -33,7 +33,7 @@
 		    </div>
 			<div id="navbar" class="navbar-collapse collapse">
 
-			<form method = "get" action = "search/" target="_blank">
+			<form method = "get" action = "/accounts/search/">
 	          <ul class="nav navbar-nav">
 				  <li><a href="/accounts/profile">Profile</a></li>
 				  <li><a href="/accounts/register">Register</a></li>
@@ -87,6 +87,7 @@
 
 
   </body>
+{% block featured %}
 <div class="container scroll-buffer" id="featured_apps">
   		<section>
 			<div class="page-header">
@@ -236,4 +237,5 @@
 			</div>
   		</section>
   	</div>
+{% endblock %}
 </html>
